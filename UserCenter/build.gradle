@@ -5,6 +5,7 @@ if (isUserModule.toBoolean()) {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
@@ -51,5 +52,7 @@ dependencies {
 
     compile project(':Provider')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //Dagger2
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
 
